@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="GUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="72*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.Column="1" Width="75">
+            <local:NeuronGUI x:Name="input1" BorderBrush="#FFBD2626"/>
+            <local:NeuronGUI x:Name="input2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Height="360">
+            <local:NeuronGUI x:Name="Neuron1"/>
+            <local:NeuronGUI x:Name="Neuron2"/>
+            <local:NeuronGUI x:Name="Neuron3"/>
+        </StackPanel>
+        <StackPanel Grid.Column="5">
+            <local:NeuronGUI x:Name="output"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="375" Margin="10,0,0,0" VerticalAlignment="Top" Width="114">
+            <TextBox x:Name="TextBoxInput1" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="textBoxInput2" TextWrapping="Wrap" Text="TextBox"/>
+            <Button x:Name="buttonCalculate" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="buttonCalculate_Click"/>
+        </StackPanel>
+        <TextBlock x:Name="textBlockI1w1" Grid.Column="2" HorizontalAlignment="Left" Margin="47,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockI1w2" Grid.Column="2" HorizontalAlignment="Left" Margin="72,69,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockI1w3" Grid.Column="2" HorizontalAlignment="Left" Margin="109,113,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockI2w1" Grid.Column="2" HorizontalAlignment="Left" Margin="72,180,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockI2w2" Grid.Column="2" HorizontalAlignment="Left" Margin="109,221,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockI2w3" Grid.Column="2" HorizontalAlignment="Left" Margin="134,267,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockn1w1" Grid.Column="4" HorizontalAlignment="Left" Margin="105,113,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockn2w1" Grid.Column="4" HorizontalAlignment="Left" Margin="120,189,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockn3w1" Grid.Column="4" HorizontalAlignment="Left" Margin="131,287,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
